@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:cineplus/core/data/local/dummy/avatar_data.dart';
+import 'package:cineplus/ui/pages/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cineplus/ui/config/theme.dart';
@@ -45,7 +46,11 @@ class _AvatarSelectScreenState extends State<AvatarSelectScreen> {
           onPressed: () {
             if (selectedAvatarIndex != -1) {
               // Navigasi ke halaman home
-              Navigator.pushReplacementNamed(context, '/home');
+                 Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomeScreen(),
+                  ));
             }
           },
           label: const Text("Next"),
