@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:cineplus/avatar_profile_screen.dart';
+import 'package:cineplus/ui/pages/user_profile/avatar_select_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => AvatarProfileScreen(),
+            builder: (context) => AvatarSelectScreen(),
           ));
     });
   }
