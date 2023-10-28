@@ -32,8 +32,11 @@ class _CategoryItemState extends State<CategoryItem> {
         margin: EdgeInsets.only(right: 12),
         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         decoration: BoxDecoration(
-          color: widget.isActive ? primaryColor : Color(0xff222222),
+          color: widget.isActive ? primaryColor.withOpacity(0.2) : Color(0xff222222),
           borderRadius: BorderRadius.circular(10),
+          border : widget.isActive ?  Border.all(
+            color: primaryColor
+          ) : Border()
         ),
         child: Text(
           widget.title,

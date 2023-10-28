@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'core/route/route_generator.dart';
 
@@ -15,18 +14,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Cineplus',
       debugShowCheckedModeBanner: false,
-
-       onGenerateRoute: RouteGenerator.generateRoute,
-             onUnknownRoute: ((settings) {
+      onGenerateRoute: RouteGenerator.generateRoute,
+      onUnknownRoute: ((settings) {
         Navigator.pushNamed(context, 'error');
       }),
       initialRoute: '/',
       theme: ThemeData(
-    
         primarySwatch: Colors.blue,
       ),
-
     );
   }
 }
-
